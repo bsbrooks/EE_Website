@@ -1,0 +1,20 @@
+/*This is is a custom stylesheet*/
+#left_banner{
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+}
+#right_banner{
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 0;
+}
+
+.panel-heading:hover {
+	cursor: pointer;
+}
+.panel-heading{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
