@@ -6,7 +6,11 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- <<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet"> -->
+    var item = [];
+    var quantity = [];
     
 </head>
 
@@ -16,7 +20,7 @@
 
 
   <body>
-    <div class="container" id="mnCntnr">
+    <div  id="mnCntnr">
 
       <div class="row" id="mnTitle">
 
@@ -27,25 +31,57 @@
 
    
 
-        <div class="row" id="mnList">
+        <div class="row col-lg-8 col-xs-8" id="mnList">
 
-          <div class= "col-lg-8 col-xs-8">
-          <p>Click Here to Add Item &#40Double Click On Item To Remove&#41 </p>
-          </div>
+          
+          <p>Click Here to Add New Item &#40Double Click On Item To Remove&#41 </p>
+
+          <form>
+
+            Item:
+            <input type="text" id="item" size="60">
+            
+            Quantity:
+            <input type="text" id="quantity" size="2" >
+            <br>
+            <!--<input type="submit" value="submit">-->
+<script type="text/javascript">
+            var itemInput = document.getElementById("item");
+            var itemQuantity = document.getElementById("quantity");
+
+            function insert ( ) {
+              item.push(itemInput.value);
+              quantity.push(itemQuantity);
+              
+          }
+         
+          for (var i = 0; i < item.length; i++) {
+            display: inline 
+            <p>item[i], quantity[i]</p>;
+          }
+
+          </script>
+          <div id-"display"
+
+          </form>
+           </div>
+           </div>
+        
 
       
-</div>
-        <div class="row">
-          <div "col-lg-4 col-sm-4" id="storeFlrPln"> 
-          <img src="img/supermarket_layout.png" alt="Supermarket Floor Plan" float="right" class="responsive">
+
+        <div class="row "col-lg-4 col-sm-4" id="storeFlrPln"">
+          <div id="image">
+          <img src="img/supermarket_layout.png" alt="Supermarket Floor Plan" class="img-responsive center-block" >
           </div>
+        </div>
 
         </div>
 
       </div>
+
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+ 
     
     
 

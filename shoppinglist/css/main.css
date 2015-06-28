@@ -1,7 +1,7 @@
 #mnCntnr{
   background-color: lightgreen;
   height: 700px;
-  width: 100%;
+  /*width: 100%;*/
   border: 10px;
   border-color: blue;
 }
@@ -14,13 +14,17 @@
 #mnList{
   background-color: lightblue;
   height: 600px;
-  width: 300px;
+  padding-left: 20px;
+  /*width: 300px;*/
   
 }
 #storeFlrPln{
   background-color: red;
   height: 600px;
-  /*width: auto;*/
+}
+
+#image{
+  margin-top: 35px;
   
 }
 #mnTitle{
@@ -28,3 +32,4 @@
   height: 80px;
   text-align: center;
   color: white;
+}
