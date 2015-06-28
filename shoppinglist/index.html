@@ -9,8 +9,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-    var item = [];
-    var quantity = [];
+
     
 </head>
 
@@ -46,6 +45,9 @@
             <br>
             <!--<input type="submit" value="submit">-->
 <script type="text/javascript">
+
+    var item = [];
+    var quantity = [];
             var itemInput = document.getElementById("item");
             var itemQuantity = document.getElementById("quantity");
 
@@ -56,12 +58,12 @@
           }
          
           for (var i = 0; i < item.length; i++) {
-            display: inline 
+              $('#display').append('<p>' + quantity[i] + item[i] + '</p>')
             <p>item[i], quantity[i]</p>;
           }
 
           </script>
-          <div id-"display"
+          <div id="display"
 
           </form>
            </div>
