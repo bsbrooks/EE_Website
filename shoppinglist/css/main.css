@@ -6,7 +6,7 @@
   border-color: blue;
 }
 #addItem{
-  background-color: blue;
+  background-color: orange;
   height: 20px;
  
   border: 10px;
@@ -24,7 +24,7 @@
 }
 
 #image{
-  margin-top: 35px;
+  margin-top: 50px;
   
 }
 #mnTitle{
@@ -33,3 +33,34 @@
   text-align: center;
   color: white;
 }
+
+#newItem{
+  background-color: tan;
+  height: 50px;
+}
+/*<script type="text/javascript">
+ $(document).ready(function() {
+  var item = []; var quantity = [];
+  var itemInput = document.getElementById("item");
+  var itemQuantity = document.getElementById("quantity");
+  $('#addItem').click(function() {
+    item.push(itemInput.value); quantity.push(itemQuantity);
+    for (var i = 0; i < item.length; i++) {
+      $('#display').append('<p>' + quantity[i] + item[i] + '</p>')
+       } }) })
+ </script>
+
+
+
+ <script type="text/javascript">
+ $(document).ready(function() {
+  var item = []; var quantity = [];
+  var itemInput = document.getElementById("item");
+  var itemQuantity = document.getElementById("quantity");
+  $('#addItem').click(function() {
+    item.push(itemInput.value);
+    quantity.push(itemQuantity.value);
+    for (var i = 0; i < item.length;
+      i++) {
+      $('#display').append('<p>' + quantity[i] + item[i] + '</p>') } }) })
+ </script>

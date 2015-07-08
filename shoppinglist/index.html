@@ -32,47 +32,58 @@
 
         <div class="row col-lg-8 col-xs-8" id="mnList">
 
+          <div id="newItem">
+            
           
-          <p>Click Here to Add New Item &#40Double Click On Item To Remove&#41 </p>
+          Click Here to Add New Item &#40Click On Item To Remove&#41
+          <input type="button" id="addItem">
 
-          <form>
+         <form>
 
             Item:
-            <input type="text" id="item" size="60">
+            <input type="text" id="product" size="60">
             
             Quantity:
-            <input type="text" id="quantity" size="2" >
-            <br>
+            <input type="text" id="howMuch" size="2" >
+            </div>
+             
             <!--<input type="submit" value="submit">-->
-<script type="text/javascript">
+<script 
 
-    var item = [];
-    var quantity = [];
-            var itemInput = document.getElementById("item");
-            var itemQuantity = document.getElementById("quantity");
+    type="text/javascript">
+ $(document).ready(function() {
+  var item = []; var quantity = [];
+  var itemInput = document.getElementById("product");
+  var itemQuantity = document.getElementById("howMuch");
 
-            function insert ( ) {
-              item.push(itemInput.value);
-              quantity.push(itemQuantity);
-              
-          }
-         
-          for (var i = 0; i < item.length; i++) {
-              $('#display').append('<p>' + quantity[i] + item[i] + '</p>')
-            <p>item[i], quantity[i]</p>;
-          }
+  $('#addItem').click(function() {
+    item.push(itemInput);
+    quantity.push(itemQuantity);
+    for (var i = 0; i < item.length;
+      i++) {
+        var buyItem = $("<p>");
+      buyItem.append(itemQuantity + " " +itemInput);
+      
+      $('#display').html(buyItem);
+     
+       } }) })
 
           </script>
-          <div id="display"
+          <div id="display">
+           
+         </div>
+         
 
-          </form>
+         </form>
+        
+
            </div>
-           </div>
+           
         
 
       
 
-        <div class="row "col-lg-4 col-sm-4" id="storeFlrPln"">
+        <div class="row col-lg-4 col-sm-4" id="storeFlrPln"">
           <div id="image">
           <img src="img/supermarket_layout.png" alt="Supermarket Floor Plan" class="img-responsive center-block" >
           </div>
