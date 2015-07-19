@@ -38,29 +38,3 @@
   background-color: tan;
   height: 50px;
 }
-/*<script type="text/javascript">
- $(document).ready(function() {
-  var item = []; var quantity = [];
-  var itemInput = document.getElementById("item");
-  var itemQuantity = document.getElementById("quantity");
-  $('#addItem').click(function() {
-    item.push(itemInput.value); quantity.push(itemQuantity);
-    for (var i = 0; i < item.length; i++) {
-      $('#display').append('<p>' + quantity[i] + item[i] + '</p>')
-       } }) })
- </script>
-
-
-
- <script type="text/javascript">
- $(document).ready(function() {
-  var item = []; var quantity = [];
-  var itemInput = document.getElementById("item");
-  var itemQuantity = document.getElementById("quantity");
-  $('#addItem').click(function() {
-    item.push(itemInput.value);
-    quantity.push(itemQuantity.value);
-    for (var i = 0; i < item.length;
-      i++) {
-      $('#display').append('<p>' + quantity[i] + item[i] + '</p>') } }) })
- </script>

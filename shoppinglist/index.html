@@ -9,14 +9,12 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-
     
 </head>
 
 <style type="text/css">
   
 </style>
-
 
   <body>
     <div  id="mnCntnr">
@@ -25,77 +23,59 @@
 
         <div class="col-lg-12 col-xs-12"><h1><center>My Shopping List</center></h1>
         </div>
-
-      </div>
-
-   
-
+        </div>
         <div class="row col-lg-8 col-xs-8" id="mnList">
 
-          <div id="newItem">
-            
+          <div id="newItem">    
           
           Click Here to Add New Item &#40Click On Item To Remove&#41
-          <input type="button" id="addItem">
 
-         <form>
+         <form id="add-item-form">
+
+            Quantity:
+            <input type="text" id="howMuch" size="2" >
 
             Item:
             <input type="text" id="product" size="60">
             
-            Quantity:
-            <input type="text" id="howMuch" size="2" >
-            </div>
-             
-            <!--<input type="submit" value="submit">-->
+            <button type="submit" style="display: none;"></button>
+
+          </div>
+
 <script 
 
     type="text/javascript">
  $(document).ready(function() {
   var item = []; var quantity = [];
-  var itemInput = document.getElementById("product");
-  var itemQuantity = document.getElementById("howMuch");
+  
 
-  $('#addItem').click(function() {
+  $('#add-item-form').submit(function(e) {
+    e.preventDefault();
+    var itemInput = document.getElementById("product").value;
+    var itemQuantity = document.getElementById("howMuch").value;
     item.push(itemInput);
     quantity.push(itemQuantity);
-    for (var i = 0; i < item.length;
-      i++) {
-        var buyItem = $("<p>");
-      buyItem.append(itemQuantity + " " +itemInput);
-      
-      $('#display').html(buyItem);
-     
-       } }) })
+    // console.log(item);
+    // console.log(quantity);
+    $('#display').append("<p class='food-item'>" + itemQuantity + " " + itemInput + "</p>");
+    document.getElementById("howMuch").value = '';
+    document.getElementById("product").value = '';
+    document.getElementById("howMuch").focus();
+  })});
 
-          </script>
-          <div id="display">
-           
-         </div>
-         
+ $(document).on("dblclick", '.food-item', function() {
+  $(this).remove();
+ });
 
-         </form>
-        
-
-           </div>
-           
-        
-
-      
-
+        </script>
+        </form>
+        </div>
         <div class="row col-lg-4 col-sm-4" id="storeFlrPln"">
           <div id="image">
           <img src="img/supermarket_layout.png" alt="Supermarket Floor Plan" class="img-responsive center-block" >
           </div>
         </div>
-
+        </div>
         </div>
 
-      </div>
-
   </body>
- 
-    
-    
-
-    
